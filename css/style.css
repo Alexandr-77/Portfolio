@@ -1,0 +1,150 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+}
+
+.container {
+   max-width: 1170px;
+   margin: 0 auto 100px;
+   padding: 0 5%;
+}
+.header {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   align-items: center;
+   margin-top: 30px;
+}
+.header__left-block {
+   display: flex;
+   align-items: center;
+}
+.header__left-block-img {
+   width: 180px;
+   margin-right: 20px;
+
+}
+.header__left-block-img img {
+   display: block;
+   max-width: 100%;
+   border-radius: 50%;
+}
+.header__left-block-text h3 {
+   font-size: 25px;
+}
+/* =====   ====== */
+.tel-top {
+   display: block;
+   text-decoration: none;
+   text-align: center;
+   color:#0000FF;
+   margin-bottom: 25px;
+   font-weight: 600;
+}
+.french-telephone {
+   margin-right: 8px;
+   opacity: 0;
+}
+.tel-top:hover {
+   color: rgb(6, 139, 1);
+}
+.tel-top:hover .french-telephone {
+   color: rgb(6, 139, 1);
+   opacity: 1;
+}
+
+/* трубка телефона */
+
+/* =========================== */
+.header__right-block-i {
+   display: flex;
+   list-style: none;
+   padding: 0;
+}
+.header__right-block-i a {
+   text-decoration: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background:#d4d8f373;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   padding: 25px;
+   margin-left: 20px;
+
+}
+
+.header__right-block-i i {
+   font-size: 22px;
+   color:#0000FF;
+   font-weight: 600;
+
+}
+.header__right-block-i a:hover {
+   /* background: #fffbca; */
+   background: #e2e5fa73;
+
+}
+.header__right-block-i a:hover .fa-vk {
+   color:#4A76A8;
+}
+.header__right-block-i a:hover .fa-whatsapp {
+   color:#43d854;
+}
+.header__right-block-i a:hover .fa-odnoklassniki {
+   color:#EE8208;
+}
+.header__right-block-i a:hover .fa-telegram-plane {
+   color: #27A3E3;
+}
+
+/* ==================== */
+
+.develop {
+   margin: 100px 0px;
+}
+.develop h2 {
+   font-size: 30px;
+   margin-bottom: 16px;
+}
+.develop p {
+   font-size: 18px;
+   margin-bottom: 8px;
+}
+.btn {
+   display: inline-block;
+   background: #0000ffbe;
+   color: #e6e8f7cb;
+   border-radius: 4px;
+   padding: 10px 30px;
+   margin: 30px 0;
+}
+/* ======================== */
+
+.works {
+   margin: 0 auto;
+   text-align: center;
+}
+.works h2 {
+   font-size: 36px;
+   margin-bottom: 16px;
+}
+.works p {
+   font-size: 18px;
+   margin-bottom: 8px;
+}
+/* ======= */
+.works__img {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-top: 50px;
+}
+.works__img-itam {
+   max-width: 250px;
+   margin: 0 10px 10px 20px;
+}
+.works__img-itam img {
+   max-width: 100%;
+}
