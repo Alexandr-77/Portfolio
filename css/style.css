@@ -69,7 +69,7 @@ body a{
    display: flex;
    justify-content: center;
    align-items: center;
-   background:#d4d8f373;
+   background:#eae9ec;
    width: 15px;
    height: 15px;
    border-radius: 50%;
@@ -81,6 +81,7 @@ body a{
 .header__right-block-i i {
    font-size: 22px;
    color:#0000FF;
+
    font-weight: 600;
 
 }
@@ -154,4 +155,15 @@ body a{
 }
 .works__img-itam a:hover p {
    color: #0000FF;
+}
+
+
+
+@media (max-width: 768px) {
+   .header__left-block-img {
+      max-width: 150px;
+   }
+   .header__right-block {
+      margin-top: 20px;
+   }
 }
