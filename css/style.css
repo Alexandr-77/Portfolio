@@ -2,6 +2,9 @@
    box-sizing: border-box;
    margin: 0;
 }
+body a{
+   text-decoration: none;
+}
 
 .container {
    max-width: 1170px;
@@ -143,8 +146,12 @@
 }
 .works__img-itam {
    max-width: 250px;
-   margin: 0 10px 10px 20px;
+   margin: 0 10px 30px 20px;
+   /* border: 1px solid #0000FF; */
 }
 .works__img-itam img {
    max-width: 100%;
+}
+.works__img-itam a:hover p {
+   color: #0000FF;
 }
