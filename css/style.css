@@ -47,16 +47,17 @@ body a{
    color:#0000FF;
    margin-bottom: 25px;
    font-weight: 600;
+   transition: .8s;
 }
 .french-telephone {
    margin-right: 8px;
    opacity: 0;
 }
 .tel-top:hover {
-   color: rgb(6, 139, 1);
+   color:#EE8208;
 }
 .tel-top:hover .french-telephone {
-   color: rgb(6, 139, 1);
+   color:#EE8208;
    opacity: 1;
 }
 
@@ -141,10 +142,16 @@ body a{
    font-size: 36px;
    margin-bottom: 16px;
 }
+
 .works p {
-   font-size: 18px;
+   font-size: 19px;
    margin-bottom: 8px;
+   color: #000000;
+   transition: 1s;
 }
+/* .works__img a:hover p {
+   color:#EE8208;
+} */
 /* ======= */
 .works__img {
    display: flex;
@@ -156,12 +163,19 @@ body a{
    max-width: 250px;
    margin: 0 10px 30px 20px;
    /* border: 1px solid #0000FF; */
+   overflow: hidden;
 }
 .works__img-itam img {
    max-width: 100%;
+   transition: 1s;
+
 }
 .works__img-itam a:hover p {
-   color: #0000FF;
+   color:#EE8208;
+}
+.works__img-itam a:hover img {
+   transform: scale(1.1); 
+
 }
 
 
