@@ -10,10 +10,11 @@ body a{
 
 .container {
    max-width: 1400px;
-   margin: 0 auto 100px;
+   margin: 0 auto;
    padding: 0 5%;
    background: rgb(255, 255, 235);
    padding-top: 30px;
+   padding-bottom: 60px;
 }
 .header {
    display: flex;
