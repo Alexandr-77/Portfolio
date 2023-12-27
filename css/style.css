@@ -100,6 +100,7 @@ button {
   --bg: #262626;
   --bb: #feb700;
   --bbb: #e99f00;
+  --bb-hov: #ffe7a8;
   --blu: #2f93ff;
   --blue: #0051a9;
   --blus: #18216d;
@@ -160,7 +161,7 @@ button {
   background: url(../img/header/header-bg.webp) 15% 0px / cover no-repeat;
   min-height: 695px;
   height: calc(100vh);
-  padding: 50px 0;
+  padding: 25px 0;
   position: relative;
   z-index: 0;
 }
@@ -179,7 +180,7 @@ button {
   background: url(../img/header/header-bg-2.webp) 15% 0px / cover no-repeat;
   min-height: 695px;
   height: calc(100vh);
-  padding: 50px 0;
+  padding: 25px 0;
   position: relative;
   z-index: 0;
 }
@@ -227,6 +228,28 @@ button {
 }
 .header__menu-active {
   color: var(--bb);
+}
+
+.header__box-top-btn {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* border: #008318 solid 1px; */
+  padding-bottom: 28px;
+}
+.header__top-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--bb);
+}
+.header__top-link:hover {
+  color: var(--bb-hov);
+}
+.header__top-link img {
+  width: 18px;
+  margin-right: 6px;
 }
 .header__btn-order {
   color: var(--st);
@@ -360,6 +383,10 @@ button {
   width: 260px;
   height: 55px;
 }
+.header__main-btn span {
+  display: inline-block;
+  margin-left: 10px;
+}
 .header__main-btn:hover {
   background: var(--bb);
   color: var(--st);
@@ -396,7 +423,7 @@ button {
 }
 /* ====== Медиа 1140px ====== */
 @media (max-width: 1140px) {
-  .header__top-btn {
+  .header__box-top-btn {
     display: none;
   }
 }
@@ -418,6 +445,18 @@ button {
   .header__btn-order {
     display: none;
   }
+  .header__box-top-btn {
+    display: block;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .header__top-link {
+    margin: 0;
+  }
+  .header__top-btn {
+    display: none;
+  }
   .header__block-burger {
     display: block;
   }
@@ -427,6 +466,7 @@ button {
   .header__block-nav {
     position: absolute;
     width: 100%;
+    min-height: 600px;
     height: 100vh;
     top: 90px;
     left: 0;
@@ -451,6 +491,7 @@ button {
 /* ====== Медиа 990px / ====== */
 /* ====== Медиа 768px ====== */
 @media (max-width: 768px) {
+
   .header__menu {
     flex-direction: column;
     padding-bottom: 25px;
@@ -467,6 +508,8 @@ button {
     font-size: 4vw;
   }
 }
+
+
 /* ====== Медиа 768px /====== */
 /* ====== Медиа 550px ====== */
 @media (max-width: 550px) {
@@ -505,8 +548,15 @@ button {
 /* ====== Медиа 550px /====== */
 /* ====== Медиа 450px ====== */
 @media (max-width: 450px) {
-  .header__box-bottom a {
+  /* .header__box-bottom a {
     font-size: 22px;
+  } */
+  .header__box-top-btn {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
   }
   .header__main-btn {
     font-size: 16px;
@@ -532,6 +582,22 @@ button {
     font-size: 16px;
   }
 }
+
+@keyframes main-anime {
+  0% {
+    margin-bottom: -600px;
+    opacity: 0;
+  }
+  100% {
+    margin-bottom: 0px;
+    opacity: 1;
+  }
+}
+.header__cont-main {
+  animation-name: main-anime;
+  animation-duration: 1.5s;
+}
+
 /* ========= header / ======== */
 /* ========= about ======== */
 .about {
@@ -540,27 +606,23 @@ button {
 }
 .about__box {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  gap: 80px;
+  flex-direction: column;
+  text-align: center;
 }
-.about__box-item1 {
-  width: 65%;
-}
+/* .about__box-item1 {} */
 .about__title {
   margin-bottom: 50px;
 }
-.about__ul {
-  padding-left: 30px;
-}
 .about__ul-li {
-  margin-bottom: 25px;
+  margin-bottom: 45px;
   position: relative;
   font-size: 20px;
 }
 .about__ul-li:last-child {
   margin-bottom: 0px;
 }
-.about__ul-li::before {
+/* .about__ul-li::before {
   position: absolute;
   content: "";
   width: 8px;
@@ -573,11 +635,10 @@ button {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-}
+} */
 .about__box-item2 {
-  width: 25%;
   display: flex;
-  flex-direction: column;
+  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -603,16 +664,6 @@ button {
   .about__title {
     text-align: center;
   }
-  .about__box-item1 {
-    width: 100%;
-    padding: 0 20px 50px;
-  }
-  .about__box-item2 {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 20px 0 0;
-  }
   .about__item-grup {
     width: 280px;
     text-align: center;
@@ -625,6 +676,13 @@ button {
   .about__subtitle {
     font-size: 22px;
   }
+  .about__box {
+    gap: 50px;
+  }
+  .about__ul-li {
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
 }
 /* ====== Медиа 768px /====== */
 /* ====== Медиа 450px ====== */
@@ -635,15 +693,13 @@ button {
   .about {
     padding: 50px 0 35px;
   }
+  .about__box {
+    gap: 30px;
+  }
   .about__title {
     margin-bottom: 30px;
   }
-  .about__box-item1 {
-    padding: 0 0 15px;
-  }
-  .about__ul {
-    padding-left: 25px;
-  }
+
   .about__ul-li {
     font-size: 18px;
   }
@@ -668,9 +724,6 @@ button {
 /* ====== Медиа 450px /====== */
 /* ====== Медиа 400px ====== */
 @media (max-width: 400px) {
-  .about__ul {
-    padding-left: 20px;
-  }
   .about__ul-li {
     font-size: 16px;
     margin-bottom: 30px;
@@ -940,7 +993,7 @@ button {
 /* ========= price / ======== */
 /* ========= slyder ======== */
 .slyder {
-  background: url("../img/slyder/slyder-bg.jpg") 0px 0px / cover no-repeat;
+  background: url("../img/slyder/slyder-bg.webp") 0px 0px / cover no-repeat;
   width: 100%;
   height: 100%;
 }
@@ -1263,7 +1316,22 @@ button {
 }
 .gallery__bottom-link {
   min-width: 200px;
+  animation: glowing 2800ms infinite;
 }
+@keyframes glowing {
+  0% { background-color: #feb700; box-shadow: 0 0 3px #feb700; }
+  50% { background-color: #b61500; box-shadow: 0 0 10px #d83838; }
+  100% { background-color: #feb700; box-shadow: 0 0 3px #feb700; }
+
+  /* 0% { background-color: #585858; box-shadow: 0 0 3px #585858; }
+  50% { background-color: #818181; box-shadow: 0 0 10px #818181; }
+  100% { background-color: #585858; box-shadow: 0 0 3px #585858; } */
+
+  /* 0% { background-color: #2ba805; box-shadow: 0 0 5px #2ba805; }
+  50% { background-color: #49e819; box-shadow: 0 0 20px #49e819; }
+  100% { background-color: #2ba805; box-shadow: 0 0 5px #2ba805; } */
+}
+
 /* ====== Медиа 990px ====== */
 @media (max-width: 990px) {
   .gallery__box {
@@ -1294,7 +1362,7 @@ button {
 
 /* ========= application ======== */
 .application {
-  background: url(../img/application/application-bg.jpg) 0 0 / cover no-repeat;
+  background: url(../img/application/application-bg.webp) 0 0 / cover no-repeat;
   width: 100%;
   /* min-height: 500px; */
   padding: 160px 0 80px;
@@ -1392,10 +1460,41 @@ textarea.application__input {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
+.application__link-telegram {
+  position: relative;
+}
+.application__link-telegram::before,
+.application__link-telegram::after {
+  animation: application--telegram 1300ms infinite;
+  content: "";
+  position: absolute; top: 0; left: 0;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image: 
+    radial-gradient(rgba(255,255,255,1), rgba(255,255,255,0) 30%),
+    linear-gradient(45deg, rgba(0,0,0,0) 49%, rgba(255,255,255,.4) 50%, rgba(0,0,0,0) 51%),
+    linear-gradient(135deg, rgba(0,0,0,0) 49%, rgba(255,255,255,.4) 50%, rgba(0,0,0,0) 51%);
+  -webkit-animation: application--telegram 10s linear infinite;
+  animation: application--telegram 10s linear infinite;
+  transform: scale(0, 0) rotate(0deg);
+}
+.application__link-telegram:before {
+  top: -30%;
+  right: 0; left: auto;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
 .application__link-telegram:hover {
-  background: #0069a1;
+  /* background: #0069a1; */
   background: #004d77;
 }
+@keyframes application--telegram {
+  10% { transform: scale(1, 1) rotate(80deg); }
+  20% { transform: scale(0, 0) rotate(160deg); }
+  100% { transform: scale(0, 0) rotate(0deg); }
+}
+
 .application__link-whatsapp:hover {
   background: #008318;
 }
@@ -1406,6 +1505,7 @@ textarea.application__input {
 .application__subtitle {
   font-weight: 500;
 }
+
 /* ====== Медиа 1140px ====== */
 @media (max-width: 1140px) {
 }
@@ -1977,6 +2077,9 @@ textarea.application__input {
   width: 200px;
   margin-bottom: 50px;
 }
+/* .footer__logo img {
+  filter: drop-shadow(2px 4px 6px #fff);
+} */
 .footer__title {
   font-weight: 600;
   font-size: 28px;
@@ -2039,7 +2142,9 @@ textarea.application__input {
   -o-transform: scale(1.02);
   margin-top: -2px;
 }
-
+.footer__icon-linck:hover .footer__icon {
+  filter: drop-shadow(2px 4px 6px #fff);
+}
 /* ====== Медиа 450px ====== */
 @media (max-width: 450px) {
   .footer__title {
