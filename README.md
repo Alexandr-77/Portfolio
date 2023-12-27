@@ -1,2 +1,3 @@
 # Portfolio
-https://alexandr-77.github.io/Portfolio/
+
+![image](img/header/readme-bg.jpg)
